@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_default_seo_default_seos",
+  "info": {
+    "displayName": "DefaultSEO"
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text",
+      "default": "MetaDescription"
+    },
+    "ShareImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
