@@ -38,9 +38,6 @@
         "images"
       ]
     },
-    "Content": {
-      "type": "blocks"
-    },
     "Slug": {
       "type": "uid",
       "targetField": "Title",
@@ -50,6 +47,14 @@
       "type": "component",
       "repeatable": false,
       "component": "default-seo.default-seo"
+    },
+    "Content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
