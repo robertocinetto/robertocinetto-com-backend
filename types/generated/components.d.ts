@@ -4,11 +4,13 @@ export interface DefaultSeoDefaultSeo extends Schema.Component {
   collectionName: 'components_default_seo_default_seos';
   info: {
     displayName: 'DefaultSEO';
+    description: '';
   };
   attributes: {
     MetaTitle: Attribute.String;
     MetaDescription: Attribute.Text & Attribute.DefaultTo<'MetaDescription'>;
     ShareImage: Attribute.Media;
+    DisableIndexing: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 

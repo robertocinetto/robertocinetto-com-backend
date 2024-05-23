@@ -21,7 +21,9 @@
     "Category": {
       "type": "enumeration",
       "enum": [
-        "Tutorials"
+        "Tutorials",
+        "Tips",
+        "News"
       ],
       "required": true
     },
