@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: robertocinetto-com-backend-test
+    name: robertocinetto-com-backend
     env: node
     plan: starter
     buildCommand: npm install && npm build
