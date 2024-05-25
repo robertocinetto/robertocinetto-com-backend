@@ -26,3 +26,5 @@ services:
         generateValue: true
       - key: API_TOKEN_SALT
         generateValue: true
+      - key: TRANSFER_TOKEN_SALT
+        generateValue: true
