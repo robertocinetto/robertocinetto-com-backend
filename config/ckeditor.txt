@@ -1,0 +1,103 @@
+globalThis.CKEditorConfig = {
+
+    /* By default custom configs and theme
+    defined in this file are going to be spread into
+    default configs and theme these two properties below
+    allow you to redefine default objects completely: */
+
+    // configsOverwrite:true,
+    //themeOverwrite:true,
+
+    /* Here you can redefine default configs
+    or add completely new ones.
+    Each config includes: 
+    "styles", "field" and "editorConfig" properties.
+    Property "field" is required. */
+
+    configs:{
+        toolbar:{
+            styles:`
+							.ck-content .summary {
+								font-style: italic;
+								font-size: 20px;
+							}
+						`,
+            // field:{},
+            editorConfig:{
+							heading: {
+								options: [
+									// { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+									// { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+									// { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+									// { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+									// { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+								]
+							},
+							style: {
+								definitions: [
+									{
+										name: "Summary",
+										element: "p",
+										classes: ["summary"],
+									},
+									{
+										name: "Title",
+										element: "h1",
+										classes: ["document-title"],
+									},
+									{
+										name: "Subtitle",
+										element: "h2",
+										classes: ["document-subtitle"],
+									},
+									{
+										name: "Callout",
+										element: "p",
+										classes: ["callout"],
+									},
+									{
+										name: "Side quote",
+										element: "blockquote",
+										classes: ["side-quote"],
+									},
+									{
+										name: "Needs clarification",
+										element: "span",
+										classes: ["needs-clarification"],
+									},
+									{
+										name: "Wide spacing",
+										element: "span",
+										classes: ["wide-spacing"],
+									},
+									{
+										name: "Small caps",
+										element: "span",
+										classes: ["small-caps"],
+									},
+									{
+										name: "Code (dark)",
+										element: "pre",
+										classes: ["stylish-code", "stylish-code-dark"],
+									},
+									{
+										name: "Code (bright)",
+										element: "pre",
+										classes: ["stylish-code", "stylish-code-bright"],
+									},
+								],
+							},
+						}
+        },
+    },
+
+    /* Here you can customize the plugin's theme.
+    This will be passed as "createGlobalStyle". */
+    theme:{
+        // common:``,
+        // light:``,
+        // dark:``,
+        // additional:``
+    }
+
+}

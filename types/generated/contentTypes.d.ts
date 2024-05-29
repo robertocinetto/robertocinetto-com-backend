@@ -917,15 +917,14 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String & Attribute.Required;
     SEO: Attribute.Component<'default-seo.default-seo'>;
+    Slug: Attribute.UID<'api::page.page', 'Title'> & Attribute.Required;
     Content: Attribute.RichText &
       Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::ckeditor5.CKEditor',
         {
-          output: 'HTML';
-          preset: 'rich';
+          preset: 'toolbar';
         }
       >;
-    Slug: Attribute.UID<'api::page.page', 'Title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -965,10 +964,9 @@ export interface ApiPostPost extends Schema.CollectionType {
     SEO: Attribute.Component<'default-seo.default-seo'>;
     Content: Attribute.RichText &
       Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
+        'plugin::ckeditor5.CKEditor',
         {
-          output: 'HTML';
-          preset: 'rich';
+          preset: 'toolbar';
         }
       >;
     createdAt: Attribute.DateTime;
