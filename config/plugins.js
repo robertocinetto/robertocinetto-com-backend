@@ -13,4 +13,16 @@ module.exports = ({ env }) => ({
 			},
 		},
 	},
+	email: {
+    config: {
+      provider: 'sendgrid',
+      providerOptions: {
+        apiKey: env('SENDGRID_API_KEY'),
+      },
+      settings: {
+        defaultFrom: 'info@robertocinetto.com',
+        defaultReplyTo: 'no-reply@robertocinetto.com',
+      },
+    },
+  },
 });
